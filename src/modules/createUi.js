@@ -1,6 +1,9 @@
 import '../styles/createUi.css'
 import todoIcon from '../svg/todo-fill.svg';
 import projectIcon from '../svg/add-fill.svg';
+import inboxIcon from '../svg/inbox-fill.svg';
+import todayIcon from '../svg/calendar-event-fill.svg';
+import thisWeekIcon from '../svg/calendar-todo-fill.svg';
 
 const createUi = () => {
     const wrapperContainer = document.getElementById('content');
@@ -34,16 +37,43 @@ const createUi = () => {
     const navList = document.createElement('ul');
     navList.classList.add('nav');
 
+    const inboxDiv = document.createElement('div');
+    inboxDiv.classList.add('li-style');
+
     const inbox = document.createElement('li');
     inbox.textContent = "Inbox";
+
+    const inboxSvg = new Image();
+    inboxSvg.src = inboxIcon;
+    inboxSvg.classList.add('add-btn')
+
+    inboxDiv.append(inboxSvg, inbox);
+
+    const todayDiv = document.createElement('div');
+    todayDiv.classList.add('li-style');
 
     const today = document.createElement('li');
     today.textContent = "Today";
 
+    const todaySvg = new Image()
+    todaySvg.src = todayIcon;
+    todaySvg.classList.add('add-btn')
+
+    todayDiv.append(todaySvg, today);
+
+    const thisWeekDiv = document.createElement('div');
+    thisWeekDiv.classList.add('li-style');
+
     const thisWeek = document.createElement('li');
     thisWeek.textContent = "This Week"
 
-    navList.append(inbox, today, thisWeek);
+    const thisWeekSvg = new Image();
+    thisWeekSvg.src = thisWeekIcon;
+    thisWeekSvg.classList.add('add-btn')
+
+    thisWeekDiv.append(thisWeekSvg, thisWeek);
+
+    navList.append(inboxDiv, todayDiv, thisWeekDiv);
 
     //divider
     const divider = document.createElement('hr');
