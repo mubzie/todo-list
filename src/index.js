@@ -1,4 +1,5 @@
 import { createUi } from './modules/createUi';
+import { todayTab } from './modules/today';
 
 // const render = () => {
 //     const content = document.getElementById('content');
@@ -9,4 +10,4 @@ import { createUi } from './modules/createUi';
 
 // }
 
-document.body.appendChild(createUi());
+document.body.appendChild(createUi(), todayTab());
