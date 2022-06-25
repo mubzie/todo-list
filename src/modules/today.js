@@ -1,7 +1,7 @@
 import todayIcon from '../svg/add-fill.svg';
 
 const todayTab = () => {
-    const mainContainer = document.getElementsByClassName('main-content');
+    // const mainContainer = document.getElementsByClassName('main-content');
 
     const todayTaskHeader = document.createElement('div');
     todayTaskHeader.classList.add('today-task-header');
@@ -14,7 +14,10 @@ const todayTab = () => {
 
     todayTaskHeader.append(todayTaskText, todayTaskIcon);
 
-    mainContainer.appendChild(todayTaskHeader);
+    // document.body.appendChild(todayTaskHeader);
+    // mainContainer.appendChild(todayTaskHeader);
+
+    return todayTaskHeader;
 
 }
 

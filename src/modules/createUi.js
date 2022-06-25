@@ -4,6 +4,9 @@ import projectIcon from '../svg/add-fill.svg';
 import inboxIcon from '../svg/inbox-fill.svg';
 import todayIcon from '../svg/calendar-event-fill.svg';
 import thisWeekIcon from '../svg/calendar-todo-fill.svg';
+import contentIcon from '../svg/add-fill.svg';
+
+import { todayTab } from './today';
 
 const createUi = () => {
     const wrapperContainer = document.getElementById('content');
@@ -51,6 +54,7 @@ const createUi = () => {
 
     const todayDiv = document.createElement('div');
     todayDiv.classList.add('li-style');
+    todayDiv.addEventListener('click', todayTab());
 
     const today = document.createElement('li');
     today.textContent = "Today";
@@ -99,6 +103,20 @@ const createUi = () => {
     //main content div
     const mainContent = document.createElement('div');
     mainContent.classList.add('main-content');
+
+    const contentDiv = document.createElement('div');
+    contentDiv.classList.add('content-div');
+
+    const contentDivText = document.createElement('div')
+    contentDivText.textContent = "Today";
+
+    const contentDivIcon = new Image();
+    contentDivIcon.src = contentIcon;
+    contentDivIcon.classList.add('add-btn');
+
+    contentDiv.append(contentDivText, contentDivIcon);
+
+    mainContent.appendChild(contentDiv);
 
     //append child element to content container
     contentContainer.append(sideBar, mainContent);
