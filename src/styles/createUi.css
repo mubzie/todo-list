@@ -103,7 +103,29 @@ img.add-btn{
     background-color: #fff;
 }
 
-.content-div{
+.container-add-task{
+    margin: 40px 60px 16px 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+.add-task-text{
+    font-family: 'SpaceGrotesk';
+    font-size: 24px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+img.add-task-btn{
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(109%);
+}
+
+/* .content-div{
+    display: flex;
+    justify-content: space-between;
+} */
