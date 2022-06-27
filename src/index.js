@@ -1,4 +1,4 @@
-import { todayTab } from './modules/today';
+import { addTaskModule } from "./modules/task";
 
 // const render = () => {
 //     const content = document.getElementById('content');
