@@ -1,4 +1,5 @@
-import { addTaskModule } from "./modules/task";
+import { addTaskForm } from "./modules/taskForm";
+
 
 // const render = () => {
 //     const content = document.getElementById('content');
@@ -9,4 +10,6 @@ import { addTaskModule } from "./modules/task";
 
 // }
 
-// document.body.appendChild(createUi(), todayTab());
+// addTaskForm();
+
+// document.body.appendChild(addTaskFormModule.addTaskForm());
