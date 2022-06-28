@@ -1,15 +1,5 @@
 import { addTaskForm } from "./modules/taskForm";
+import { displayTask } from "./modules/displayTask";
 
-
-// const render = () => {
-//     const content = document.getElementById('content');
-
-//     // content.appendChild(createUi());
-
-//     return content;
-
-// }
-
-// addTaskForm();
 
 // document.body.appendChild(addTaskFormModule.addTaskForm());
