@@ -44,7 +44,7 @@ img{
 .content-container{
     height: 100vh;
     display: grid;
-    grid-template-columns: 375px 1fr;
+    grid-template-columns: 335px 1fr;
 }
 
 .side-bar{
@@ -104,7 +104,7 @@ img.add-btn{
 }
 
 .container-add-task{
-    margin: 40px 60px 16px 60px;
+    margin: 40px 60px 32px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,6 +123,29 @@ img.add-task-btn{
     height: 32px;
     width: 32px;
     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(109%);
+}
+
+.task-display{
+   margin: 0px 60px;
+}
+
+.task-wrapper {
+    font-family: 'SpaceGrotesk';
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-con-3 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-btn{
+    background-image: url('../svg/delete-bin-fill.svg');
+    width: 24px;
+    height: 24px;
 }
 
 /* .content-div{
