@@ -9,6 +9,8 @@
   
    const addTaskForm = () => {
   
+      const wrapperContainer = document.getElementById('form-display')
+
       const formContainer = document.createElement('div');
       formContainer.classList.add('form-container');
   
@@ -87,31 +89,64 @@
   
       formContainer.append(form);
       
-      document.body.appendChild(formContainer);
+      wrapperContainer.append(formContainer);
+
+      // document.body.appendChild(formContainer);
+
+      const addTaskFunction = (e) => {
+        e.preventDefault();
+  
+        const titleInput = document.getElementById('title').value;
+        const descriptionInput = document.getElementById('description').value;
+        const dateInput = document.getElementById('date').value;
+        const priorityInput = document.getElementById('priority').value;
+  
+        const task2 = AddTaskFactory(titleInput, descriptionInput, dateInput, priorityInput);
+        task.push(task2);
+        console.log(task);
+  
+        displayTask(task, task);
+  
+      }
+  
+      let addTask = document.getElementById('addTaskForm');
+  
+      addTask.addEventListener('submit', addTaskFunction);
 
 
     }
-    addTaskForm();
 
-    const addTaskFunction = (e) => {
-      e.preventDefault();
+    
+    // addTaskForm();
+    
+    // const addTaskBtn = document.getElementById('add-task-icon');
+    // addTaskBtn.addEventListener('click', addTaskForm)
+    
+    // addTaskForm();
 
-      const titleInput = document.getElementById('title').value;
-      const descriptionInput = document.getElementById('description').value;
-      const dateInput = document.getElementById('date').value;
-      const priorityInput = document.getElementById('priority').value;
+    // let addTask = document.getElementById('form-container');
 
-      const task2 = AddTaskFactory(titleInput, descriptionInput, dateInput, priorityInput);
-      task.push(task2);
-      console.log(task);
+    // addTask.addEventListener('submit', addTaskFunction);
 
-      displayTask(task, task);
+    // const addTaskFunction = (e) => {
+    //   e.preventDefault();
 
-    }
+    //   const titleInput = document.getElementById('title').value;
+    //   const descriptionInput = document.getElementById('description').value;
+    //   const dateInput = document.getElementById('date').value;
+    //   const priorityInput = document.getElementById('priority').value;
 
-    let addTask = document.getElementById('addTaskForm');
+    //   const task2 = AddTaskFactory(titleInput, descriptionInput, dateInput, priorityInput);
+    //   task.push(task2);
+    //   console.log(task);
 
-    addTask.addEventListener('submit', addTaskFunction);
+    //   displayTask(task, task);
+
+    // }
+
+    // let addTask = document.getElementById('addTaskForm');
+
+    // addTask.addEventListener('submit', addTaskFunction);
 
 
 export { addTaskForm };

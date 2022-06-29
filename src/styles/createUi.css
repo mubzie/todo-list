@@ -146,6 +146,7 @@ img.add-task-btn{
     background-image: url('../svg/delete-bin-fill.svg');
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 /* .content-div{

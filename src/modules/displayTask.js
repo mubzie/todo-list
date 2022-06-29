@@ -1,9 +1,4 @@
-// import svg from '../svg/delete-bin-fill.svg'
-import { task } from "./task";
-
 function displayTask(task, i) {
-
-    // let i;
 
     let taskDisplay = '<div>'
 
