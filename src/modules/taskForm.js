@@ -105,7 +105,7 @@
       task.push(task2);
       console.log(task);
 
-      displayTask(task);
+      displayTask(task, task);
 
     }
 

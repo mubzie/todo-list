@@ -1,6 +1,9 @@
 // import svg from '../svg/delete-bin-fill.svg'
+import { task } from "./task";
 
-function displayTask(task) {
+function displayTask(task, i) {
+
+    // let i;
 
     let taskDisplay = '<div>'
 
@@ -19,7 +22,7 @@ function displayTask(task) {
    taskDisplay += '<div class="task-con-3">'
    taskDisplay+= `<div style="font-size: 16px">${tas.getDueDate()}</div>`
    taskDisplay+= `<div>${tas.getPriority()}</div>`
-   taskDisplay+= `<div class="icon-btn delBtn"></div>`
+   taskDisplay+= `<div class="icon-btn delBtn" data-index=${task.indexOf(i)}></div>`
    taskDisplay += '</div>'
 
    taskDisplay += '</div>'
@@ -28,11 +31,19 @@ function displayTask(task) {
     });
     taskDisplay+='</div>'
 
-  
     document.querySelector('.task-display').innerHTML = taskDisplay;
+
+    const delBtns = document.querySelectorAll('.delBtn');
+    
+    delBtns.forEach( btn => {
+        btn.addEventListener('click', () => {
+            const i = btn.dataset.index;
+            task.splice(i, 1);
+            btn.parentElement.parentElement.remove();
+        })
+    })
 }
 
-const deleteTask = document.querySelector('.delBtn');
-console.log(deleteTask);
+
 
 export { displayTask };
