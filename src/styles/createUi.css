@@ -134,6 +134,7 @@ img.add-task-btn{
     font-size: 18px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
 }
 
 .task-con-3 {
@@ -148,8 +149,3 @@ img.add-task-btn{
     height: 24px;
     cursor: pointer;
 }
-
-/* .content-div{
-    display: flex;
-    justify-content: space-between;
-} */

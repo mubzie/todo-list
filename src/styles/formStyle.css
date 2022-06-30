@@ -22,6 +22,9 @@ form {
 }
 
 .task-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 18px;
     font-weight: 900;
     margin: 8px 8px 16px 8px;
@@ -66,26 +69,35 @@ button.submit {
     cursor: pointer;
   }
 
-  .overlay {
+  .big-modal .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
-    /* display: none; */
     z-index: 1;
+    display: none;
   }
-
-  .form-container {
+  
+  .big-modal .modal-content {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    /* display: none; */
+    transform: translate(-50%, -50%) scale(0);
     z-index: 2;
   }
-/* 
-  .remove-form{
-    display: none;
-  } */
+  
+  .big-modal.active .overlay{
+    display: block;
+  }
+  
+  .big-modal.active .modal-content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .close-form-btn{
+    font-size: 32px;
+    cursor: pointer;
+  }
