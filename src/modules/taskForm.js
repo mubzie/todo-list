@@ -14,14 +14,6 @@
 
       const formContainer = document.createElement('div');
       formContainer.classList.add('form-container');
-      formContainer.classList.add('big-modal');
-      // formContainer.classList.add('active');
-
-      const addOverlay = document.getElementById('add-task-icon');
-      
-      addOverlay.addEventListener('click', () => {
-        formContainer.classList.add('active');
-      });
 
       const overlay = document.createElement('div');
       overlay.classList.add('overlay')
@@ -108,11 +100,11 @@
   
       form.append(taskHeader, titleDiv, DescriptionDiv, dateDiv, priorityDiv, buttonDiv)
   
-      formContainer.append(overlay, form);
+      formContainer.append(form);
       
-      wrapperContainer.appendChild(formContainer);
+      wrapperContainer.append(overlay, formContainer);
 
-      document.body.appendChild(formContainer);
+      // document.body.appendChild(formContainer);
 
       const addTaskFunction = (e) => {
         e.preventDefault();
