@@ -87,17 +87,13 @@
   
       const buttonDiv = document.createElement('div');
       buttonDiv.classList.add('form-button');
-
-      const cancelButton = document.createElement('button');
-      cancelButton.classList.add('submit')
-      cancelButton.textContent = 'cancel'
   
       const submitButton = document.createElement('button');
       submitButton.classList.add('submit')
       submitButton.textContent = 'add task'
-  
       setAttribute(submitButton, {'type': 'submit'});
-      buttonDiv.append(cancelButton, submitButton);
+
+      buttonDiv.appendChild(submitButton);
   
       form.append(taskHeader, titleDiv, DescriptionDiv, dateDiv, priorityDiv, buttonDiv)
   
