@@ -66,7 +66,7 @@ button.submit {
     cursor: pointer;
   }
 
-  .big-modal .overlay {
+  /* .big-modal .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -75,14 +75,52 @@ button.submit {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
     display: none;
+  } */
+
+  .big-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    /* display: none; */
   }
 
-  .big-modal .form-container {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    /* display: none; */
+  }
+
+  /* .big-modal .form-container {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
     z-index: 1;
+  } */
+
+  .big-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 1;
+  }
+
+  .form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
   }
   
   .form-container.active .overlay{

@@ -10,13 +10,14 @@
   
    const addTaskForm = () => {
   
-      const wrapperContainer = document.getElementById('form-display')
+      const wrapperContainer = document.getElementById('big-modal');
+      wrapperContainer.classList.add('active');
 
       const formContainer = document.createElement('div');
       formContainer.classList.add('form-container');
 
       const overlay = document.createElement('div');
-      overlay.classList.add('overlay')
+      overlay.classList.add('overlay');
   
       const form = document.createElement('form')
       setAttribute(form, {'id': 'addTaskForm'})
@@ -100,7 +101,7 @@
   
       form.append(taskHeader, titleDiv, DescriptionDiv, dateDiv, priorityDiv, buttonDiv)
   
-      formContainer.append(form);
+      formContainer.appendChild(form);
       
       wrapperContainer.append(overlay, formContainer);
 
