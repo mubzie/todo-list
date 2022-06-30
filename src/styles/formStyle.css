@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+/* style form */
+form {
+    width: 320px;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    font-family: 'SpaceGrotesk';
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.task-header{
+    font-size: 18px;
+    font-weight: 900;
+    margin: 8px 8px 16px 8px;
+    text-align: center;
+}
+
+form div.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    justify-content: space-between;
+  }
+
+.form-row input[type="text"],
+.form-row textarea[type="text"],
+.form-row input[type="date"],
+.form-row select[type="text"] {
+  padding: 8px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+}
+
+/* style form button */
+.form-button{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+button.submit {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: 'SpaceGrotesk';
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    background-color: #191919;
+    color: #fff;
+    margin: 8px;
+    cursor: pointer;
+  }
+
+  .big-modal .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    display: none;
+  }
+
+  .big-modal .form-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 2;
+  }
+  
+  .form-container.active .overlay{
+    display: block;
+  }
+  
+  .big-modal.active {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+  }
