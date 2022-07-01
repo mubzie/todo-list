@@ -12,7 +12,6 @@ let formModal = document.querySelector('.big-modal');
 
 addTaskBtn.addEventListener('click', () => {
     formModal.classList.add('active');
-    console.log('bro');
 })
 
 const closeForm = () => {
@@ -29,8 +28,8 @@ const addTaskFunction = (e) => {
         const dateInput = document.getElementById('date').value;
         const priorityInput = document.getElementById('priority').value;
   
-        const task2 = AddTaskFactory(titleInput, descriptionInput, dateInput, priorityInput);
-        task.push(task2);
+        const inputTask = AddTaskFactory(titleInput, descriptionInput, dateInput, priorityInput);
+        task.push(inputTask);
         console.log(task);
   
         displayTask(task, task);
