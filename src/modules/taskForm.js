@@ -4,7 +4,7 @@ import { displayTask } from "./displayTask";
 import '../styles/formStyle.css'
 
 
-const addTaskBtn = document.getElementById('add-task-icon');
+const addTaskBtn = document.getElementById('add-task-div');
 let addTask = document.getElementById('addTaskForm')
 const closeFormBtn = document.getElementsByClassName('close-form-btn')[0];
 let formModal = document.querySelector('.big-modal');

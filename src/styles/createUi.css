@@ -17,10 +17,12 @@
 body{
     margin: 0;
     height: 100vh;
+    width: 100vw;
 }
 
 header{
     height: 104px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,8 +45,9 @@ img{
 
 .content-container{
     height: 100vh;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 335px 1fr;
+    grid-template-columns: 300px 1fr;
 }
 
 .side-bar{
@@ -93,7 +96,7 @@ hr.solid{
 }
 
 img.add-btn{
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 24px;
     width: 24px;
     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(109%);
@@ -118,10 +121,25 @@ img.add-btn{
     align-items: center;
 }
 
+.add-task-div{
+    font-family: 'SpaceGrotesk';
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #52575C;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 img.add-task-btn{
     cursor: pointer;
-    height: 32px;
-    width: 32px;
+    height: 24px;
+    width: 24px;
     filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(109%);
 }
 
@@ -133,14 +151,42 @@ img.add-task-btn{
     font-family: 'SpaceGrotesk';
     font-size: 18px;
     display: flex;
+    gap: 8px;
     justify-content: space-between;
+    align-items: start;
     margin-bottom: 16px;
+}
+
+.title{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.description{
+    width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .task-con-3 {
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+.date{
+    width: 90px;
+    text-align: end;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.priority{
+    width: 72px;
+    text-align: end;
 }
 
 .icon-btn{
