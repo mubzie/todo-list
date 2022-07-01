@@ -28,7 +28,7 @@ header{
     justify-content: center;
     padding: 16px;
     gap: 16px;
-    background-color: #52575C;
+    background-color: #2F55D4;
     color: #fff;
 }
 
@@ -51,8 +51,8 @@ img{
 }
 
 .side-bar{
-    background-color: #E8E8E8;
-    color: #25282B;
+    background-color: #D5DDF6;
+    color: #2F55D4;
 }
 
 .nav{
@@ -77,7 +77,7 @@ img{
 
 hr.solid{
     margin: 16px 32px;
-    border: 0.5px solid #000000;
+    border: 0.5px solid #2F55D4;
 }
 
 .project-tab{
@@ -95,12 +95,6 @@ hr.solid{
     align-items: center;
 }
 
-img.add-btn{
-    /* cursor: pointer; */
-    height: 24px;
-    width: 24px;
-    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(109%);
-}
 
 .main-content{
     background-color: #fff;
@@ -114,6 +108,7 @@ img.add-btn{
 }
 
 .add-task-text{
+    color: #2F55D4;
     font-family: 'SpaceGrotesk';
     font-size: 24px;
     height: 40px;
@@ -128,7 +123,7 @@ img.add-btn{
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #52575C;
+    background-color: #2F55D4;
     color: #fff;
     width: 120px;
     height: 40px;

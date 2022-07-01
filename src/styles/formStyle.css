@@ -29,6 +29,7 @@ form {
     font-weight: 900;
     margin: 8px 8px 16px 8px;
     text-align: center;
+    color: #2F55D4;
 }
 
 form div.form-row {
@@ -39,6 +40,10 @@ form div.form-row {
     justify-content: space-between;
   }
 
+label{
+color: #2F55D4;
+}
+
 .form-row input[type="text"],
 .form-row textarea[type="text"],
 .form-row input[type="date"],
@@ -46,6 +51,10 @@ form div.form-row {
   padding: 8px;
   border: 1px solid #c4c4c4;
   border-radius: 4px;
+}
+
+.input:focus{
+  outline-color: #2F55D4;
 }
 
 /* style form button */
@@ -63,7 +72,7 @@ button.submit {
     font-weight: 500;
     border: none;
     border-radius: 4px;
-    background-color: #191919;
+    background-color: #2F55D4;
     color: #fff;
     margin: 8px;
     cursor: pointer;
