@@ -1,5 +1,5 @@
 import { task } from "./task";
-import { AddTaskFactory } from "./task";
+import { AddTaskConstructor } from "./task";
 import { displayTask } from "./displayTask";
 import '../styles/formStyle.css'
 
@@ -28,7 +28,7 @@ const addTaskFunction = (e) => {
         const dateInput = document.getElementById('date').value;
         const priorityInput = document.getElementById('priority').value;
   
-        const inputTask = AddTaskFactory(titleInput, descriptionInput, dateInput, priorityInput);
+        const inputTask = new AddTaskConstructor(titleInput, descriptionInput, dateInput, priorityInput);
         task.push(inputTask);
         console.log(task);
   

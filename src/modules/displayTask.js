@@ -7,16 +7,16 @@ function displayTask(task, i) {
    taskDisplay += '<div class="task-wrapper">'
 
    taskDisplay += '<div class="task-con-1">'
-   taskDisplay+= `<div class="title">${tas.getTitle()}</div>`
+   taskDisplay+= `<div class="title">${tas.title}</div>`
    taskDisplay += '</div>'
 
    taskDisplay += '<div class="task-con-2">'
-   taskDisplay+= `<div class="description">${tas.getDescription()}</div>`
+   taskDisplay+= `<div class="description">${tas.description}</div>`
    taskDisplay += '</div>'
 
    taskDisplay += '<div class="task-con-3">'
-   taskDisplay+= `<div class="date">${tas.getDueDate()}</div>`
-   taskDisplay+= `<div class="priority">${tas.getPriority()}</div>`
+   taskDisplay+= `<div class="date">${tas.dueDate}</div>`
+   taskDisplay+= `<div class="priority">${tas.priority}</div>`
    taskDisplay+= `<div class="icon-btn delBtn" data-index=${task.indexOf(i)}></div>`
    taskDisplay += '</div>'
 
