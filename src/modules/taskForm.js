@@ -29,6 +29,7 @@ const addTaskFunction = (e) => {
         const priorityInput = document.getElementById('priority').value;
   
         const inputTask = new AddTaskConstructor(titleInput, descriptionInput, dateInput, priorityInput);
+        localStorage.setItem('inputTask', JSON.stringify(inputTask));
         task.push(inputTask);
         console.log(task);
   
@@ -40,6 +41,3 @@ const addTaskFunction = (e) => {
 addTask.addEventListener('submit', addTaskFunction);
 
 export { addTaskFunction }
-
-
-
