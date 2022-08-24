@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="../src/styles/createUi.css" />
+    <title>Todo list</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="../src/svg/todo-fill.svg" alt="todo img" />
+      <div class="header-text">Blue-List</div>
+    </header>
+
+    <div class="content-container">
+      <div class="side-bar">
+        <ul class="nav">
+          <div class="li-style" id="task">
+            <li>Blue-list Task</li>
+          </div>
+        </ul>
+
+        <hr class="solid" />
+
+        <div class="project-tab" id="project">
+          <div class="project-text">Project</div>
+          <img
+            id="add-project-icon"
+            src="../src/svg/add-fill.svg"
+            alt=""
+            class="add-task-btn"
+          />
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="container-add-task" id="project">
+          <div class="add-task-text">Task</div>
+          <div id="add-task-div" class="add-task-div">
+            Add task
+            <img
+              id="add-task-icon"
+              src="../src/svg/add-fill.svg"
+              alt=""
+              class="add-task-btn"
+            />
+          </div>
+        </div>
+
+        <hr class="solid" />
+
+        <div class="task-display"></div>
+      </div>
+    </div>
+
+    <div id="big-modal"></div>
+
+    <div class="big-modal">
+      <div class="overlay"></div>
+      <div class="modal-content">
+        <form id="addTaskForm">
+          <div class="task-header">
+            <div class="form-title">add new task</div>
+            <span class="close-form-btn">&times;</span>
+          </div>
+
+          <div class="form-row">
+            <label for="title">title</label>
+            <input class="input" type="text" name="" id="title" required />
+          </div>
+
+          <div class="form-row">
+            <label for="description">description</label>
+            <textarea
+              class="input"
+              type="text"
+              name=""
+              id="description"
+              cols="50"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="date">date</label>
+            <input class="input" type="date" name="" id="date" required />
+          </div>
+
+          <div class="form-row">
+            <label for="priority">Priority</label>
+            <select class="input" type="text" name="" id="priority">
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+            </select>
+          </div>
+
+          <div class="form-button">
+            <button type="submit" class="submit">Add task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
